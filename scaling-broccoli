@@ -1,0 +1,10 @@
+            
+        case .changeBackgroundColor(let color):
+            newText.backgroundColor = color
+            
+        case .changeCornerRadius(let radius):
+            newText.cornerRadius = radius
+protocol VideoSettingsReducerProtocol {
+    mutating func reduce(_ currentState: VideoSettings,
+                         _ action: VideoSettingsModification) -> VideoSettings
+}
